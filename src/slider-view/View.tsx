@@ -5,7 +5,7 @@ import {useCallback, useEffect, useMemo} from "react";
  *
  * @param theme {get,set,remove}
  */
-export default function ({component, themes}) {
+export default function ({data,component, themes}) {
 
   const allComs = component.getAll()
 
@@ -15,9 +15,12 @@ export default function ({component, themes}) {
         id: 'test-uuid',
         title: '测试风格',
         namespace: 'mybricks.normal-pc.custom-button',
-        css: {
-          '.button': {'backgroundColor': 'red'}
-        }
+        styleAry: [
+          {
+            selector: '.button',
+            css: {'backgroundColor': 'red'}
+          }
+        ]
       }
     ])
   }, [])
