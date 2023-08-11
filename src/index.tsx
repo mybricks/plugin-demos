@@ -10,14 +10,13 @@ export default {
   ['author.zh']: "车明君",
   version: "1.0.0",
   description: "各类插件的Demos",
-  types: ['connector'],
   data: dataClz,
   contributes: {
     sliderView: {
       tab: {//在SliderView扩展一个Tab
         title: "主题",
         icon: Plugin,
-        apiSet: ['component'],
+        apiSet: ['component','themes'],
         render(args) {//View渲染
           return <SliderView {...args}/>
         }
